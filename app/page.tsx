@@ -146,42 +146,42 @@ const equipmentData = [
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead className="border bg-gray-300 text-black">Sl. No.</TableHead>
-            <TableHead className="border bg-gray-300 text-black">Name of Test</TableHead>
-            <TableHead className="border bg-gray-300 text-black">As per rule 189 Table D</TableHead>
-            <TableHead className="border bg-gray-300 text-black">Applicable (Yes/No)</TableHead>
-            <TableHead className="border bg-gray-300 text-black">Recorded Value / Observation</TableHead>
-            <TableHead className="border bg-gray-300 text-black">Result (P-Pass / F-Fail)</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Sl. No.</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Name of Test</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">As per rule 189 Table D</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Applicable (Yes/No)</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Recorded Value / Observation</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Result (P-Pass / F-Fail)</TableHead>
           </TableRow>
           <TableRow>
-            <TableHead className="border bg-gray-300 text-black">(1)</TableHead>
-            <TableHead className="border bg-gray-300 text-black">(2)</TableHead>
-            <TableHead className="border bg-gray-300 text-black">(3)</TableHead>
-            <TableHead className="border bg-gray-300 text-black">(4)</TableHead>
-            <TableHead className="border bg-gray-300 text-black">(5)</TableHead>
-            <TableHead className="border bg-gray-300 text-black">(6)</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">(1)</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">(2)</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">(3)</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">(4)</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">(5)</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">(6)</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {data.map((part, partIndex) => (
             <React.Fragment key={partIndex}>
               <TableRow>
-                <TableCell colSpan={6} className="font-medium bg-gray-300">
+                <TableCell colSpan={6} className="font-medium bg-gray-300 border-2 border-black">
                   {part.part}
                 </TableCell>
               </TableRow>
               {part.tests.map((test, testIndex) => (
                 <TableRow key={testIndex}>
-                  <TableCell className="border">{test.no}</TableCell>
-                  <TableCell className="border">{test.name}</TableCell>
-                  <TableCell className="border">{test.rule}</TableCell>
-                  <TableCell className="border p-0">
+                  <TableCell className="border-2 border-black">{test.no}</TableCell>
+                  <TableCell className="border-2 border-black">{test.name}</TableCell>
+                  <TableCell className="border-2 border-black">{test.rule}</TableCell>
+                  <TableCell className="border-2 border-black p-0">
                     <Input className="border-none h-full" />
                   </TableCell>
-                  <TableCell className="border p-0">
+                  <TableCell className="border-2 border-black p-0">
                     <Input className="border-none h-full" />
                   </TableCell>
-                  <TableCell className="border p-0">
+                  <TableCell className="border-2 border-black p-0">
                     {'result' in test ? test.result : <Input className="border-none h-full" />}
                   </TableCell>
                 </TableRow>
@@ -210,13 +210,13 @@ export default function Component() {
               </td>
             </tr>
             <tr>
-              <td className="border border-black border-dashed p-2">
-                <div className="border border-black p-2 mb-2 h-12 flex justify-center">
+              <td className="border-2 border-black border-dashed p-4">
+                <div className="border-2 border-black p-2 mb-2 h-12 flex justify-center">
                   <p>QR Code</p>
                 </div>
               </td>
-              <td className="border border-black border-dashed p-2">
-                <div className="border border-black p-2 mb-2 h-12 flex flex-col justify-center">
+              <td className="border-2 border-black border-dashed p-4">
+                <div className="border-2 border-black p-2 mb-2 h-12 flex flex-col justify-center">
                   <p className="text-right">&lt;GPS coordinated date and time&gt;</p>
                   <p className="text-right">&lt;Picture of the Registration Plate of the Vehicle&gt;</p>
                 </div>
@@ -229,43 +229,37 @@ export default function Component() {
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead colSpan={9} className="text-lg font-semibold border bg-gray-300 text-center text-black">
+            <TableHead colSpan={9} className="text-lg font-semibold border-2 border-black bg-gray-300 text-center text-black">
               General Details of Automated Testing Station
             </TableHead>
           </TableRow>
           <TableRow>
-            <TableHead rowSpan={2} className="border bg-gray-300 text-black">Registration no.</TableHead>
-            <TableHead colSpan={3} className="border text-center bg-gray-300 text-black">Location</TableHead>
-            <TableHead rowSpan={2} className="border bg-gray-300 text-black">Operating Agency Name</TableHead>
-            <TableHead rowSpan={2} className="border bg-gray-300 text-black">Test no.</TableHead>
-            <TableHead rowSpan={2} className="border bg-gray-300 text-black">Date of Test (DD-MM-YY)</TableHead>
-            <TableHead rowSpan={2} className="border bg-gray-300 text-black">Time of Test</TableHead>
-            <TableHead rowSpan={2} className="border bg-gray-300 text-black">
+            <TableHead rowSpan={2} className="border-2 border-black bg-gray-300 text-black">Registration no.</TableHead>
+            <TableHead colSpan={3} className="border-2 border-black text-center bg-gray-300 text-black">Location</TableHead>
+            <TableHead rowSpan={2} className="border-2 border-black bg-gray-300 text-black">Operating Agency Name</TableHead>
+            <TableHead rowSpan={2} className="border-2 border-black bg-gray-300 text-black">Test no.</TableHead>
+            <TableHead rowSpan={2} className="border-2 border-black bg-gray-300 text-black">Date of Test (DD-MM-YY)</TableHead>
+            <TableHead rowSpan={2} className="border-2 border-black bg-gray-300 text-black">Time of Test</TableHead>
+            <TableHead rowSpan={2} className="border-2 border-black bg-gray-300 text-black">
               Test Status (Initial Test/ 1st Re-Test / 2nd Re-test[1])
             </TableHead>
           </TableRow>
           <TableRow>
-            <TableHead className="border bg-gray-300 text-black">RTO</TableHead>
-            <TableHead className="border bg-gray-300 text-black">District</TableHead>
-            <TableHead className="border bg-gray-300 text-black">State</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">RTO</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">District</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">State</TableHead>
           </TableRow>
           <TableRow>
-            <TableHead className="border text-black">(1)</TableHead>
-            <TableHead className="border text-black">(2)</TableHead>
-            <TableHead className="border text-black">(3)</TableHead>
-            <TableHead className="border text-black">(4)</TableHead>
-            <TableHead className="border text-black">(5)</TableHead>
-            <TableHead className="border text-black">(6)</TableHead>
-            <TableHead className="border text-black">(7)</TableHead>
-            <TableHead className="border text-black">(8)</TableHead>
-            <TableHead className="border text-black">(9)</TableHead>
+            {[...Array(9)].map((_, index) => (
+              <TableHead key={index} className="border-2 border-black text-black">{`(${index + 1})`}</TableHead>
+            ))}
           </TableRow>
         </TableHeader>
         <TableBody>
           <TableRow>
             {[...Array(9)].map((_, index) => (
-              <TableCell key={index} className="border p-0">
-                <Input className="border-none h-full" />
+              <TableCell key={index} className="border-2 border-black p-0">
+                <Input className="border-none h-full p-3" />
               </TableCell>
             ))}
           </TableRow>
@@ -275,8 +269,8 @@ export default function Component() {
       <Table className="mt-6 mb-8">
         <TableBody>
           <TableRow>
-            <TableCell className="font-semibold border bg-gray-300 text-black">Due Date of Fitness test/ Re-test</TableCell>
-            <TableCell className="border p-0">
+            <TableCell className="font-semibold border-2 border-black bg-gray-300 text-black">Due Date of Fitness test/ Re-test</TableCell>
+            <TableCell className="border-2 border-black p-0">
               <Input className="border-none h-full" />
             </TableCell>
           </TableRow>
@@ -286,33 +280,33 @@ export default function Component() {
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead colSpan={11} className="text-lg font-semibold border bg-gray-300 text-center text-black">
+            <TableHead colSpan={11} className="text-lg font-semibold border-2 border-black bg-gray-300 text-center text-black">
               Details of Vehicle
             </TableHead>
           </TableRow>
           <TableRow>
-            <TableHead className="border bg-gray-300 text-black">Registration no.</TableHead>
-            <TableHead className="border bg-gray-300 text-black">Vehicle Class</TableHead>
-            <TableHead className="border bg-gray-300 text-black">Make</TableHead>
-            <TableHead className="border bg-gray-300 text-black">Model</TableHead>
-            <TableHead className="border bg-gray-300 text-black">Engine Number</TableHead>
-            <TableHead className="border bg-gray-300 text-black">Chassis Number</TableHead>
-            <TableHead className="border bg-gray-300 text-black">Fuel Type</TableHead>
-            <TableHead className="border bg-gray-300 text-black">Emission Norms</TableHead>
-            <TableHead className="border bg-gray-300 text-black">Speed Governor number (if any)</TableHead>
-            <TableHead className="border bg-gray-300 text-black">GVW (kg)</TableHead>
-            <TableHead className="border bg-gray-300 text-black">Year of Mfg.</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Registration no.</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Vehicle Class</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Make</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Model</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Engine Number</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Chassis Number</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Fuel Type</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Emission Norms</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Speed Governor number (if any)</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">GVW (kg)</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Year of Mfg.</TableHead>
           </TableRow>
           <TableRow>
             {[...Array(11)].map((_, index) => (
-              <TableHead key={index} className="border text-black">{`(${index + 1})`}</TableHead>
+              <TableHead key={index} className="border-2 border-black text-black">{`(${index + 1})`}</TableHead>
             ))}
           </TableRow>
         </TableHeader>
         <TableBody>
           <TableRow>
             {[...Array(11)].map((_, index) => (
-              <TableCell key={index} className="border p-0">
+              <TableCell key={index} className="border-2 border-black p-0">
                 <Input className="border-none h-full" />
               </TableCell>
             ))}
@@ -324,34 +318,34 @@ export default function Component() {
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead className="border bg-gray-300 text-black">Sl. No.</TableHead>
-            <TableHead className="border bg-gray-300 text-black">Name of Equipment</TableHead>
-            <TableHead className="border bg-gray-300 text-black">ID. No.</TableHead>
-            <TableHead className="border bg-gray-300 text-black">Calibration Frequency</TableHead>
-            <TableHead className="border bg-gray-300 text-black">Date of Last Calibration</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Sl. No.</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Name of Equipment</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">ID. No.</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Calibration Frequency</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Date of Last Calibration</TableHead>
           </TableRow>
           <TableRow>
             {[...Array(5)].map((_, index) => (
-              <TableHead key={index} className="border text-black">{`(${index + 1})`}</TableHead>
+              <TableHead key={index} className="border-2 border-black text-black">{`(${index + 1})`}</TableHead>
             ))}
           </TableRow>
         </TableHeader>
         <TableBody>
           {equipmentData.map((row) => (
             <TableRow key={row.no}>
-              <TableCell className="border">{row.no}</TableCell>
-              <TableCell className="border whitespace-pre-line">{row.name}</TableCell>
-              <TableCell className="border p-0">
+              <TableCell className="border-2 border-black">{row.no}</TableCell>
+              <TableCell className="border-2 border-black whitespace-pre-line">{row.name}</TableCell>
+              <TableCell className="border-2 border-black p-0">
                 <Input className="border-none h-full" />
               </TableCell>
-              <TableCell className="border p-0">
+              <TableCell className="border-2 border-black p-0">
                 {row.frequency === "NA" ? (
                   "NA"
                 ) : (
                   <Input className="border-none h-full" />
                 )}
               </TableCell>
-              <TableCell className="border p-0">
+              <TableCell className="border-2 border-black p-0">
                 {row.lastCalibration === "NA" ? (
                   "NA"
                 ) : (
@@ -368,20 +362,20 @@ export default function Component() {
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead className="border bg-gray-300 text-black">Sl. No.</TableHead>
-            <TableHead className="border bg-gray-300 text-black">Name of Test</TableHead>
-            <TableHead className="border bg-gray-300 text-black">As per rule 189 Table D</TableHead>
-            <TableHead className="border bg-gray-300 text-black">Applicable (Yes/No)</TableHead>
-            <TableHead className="border bg-gray-300 text-black">Recorded Value / Observation</TableHead>
-            <TableHead className="border bg-gray-300 text-black">Result (P-Pass / F-Fail)</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Sl. No.</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Name of Test</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">As per rule 189 Table D</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Applicable (Yes/No)</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Recorded Value / Observation</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">Result (P-Pass / F-Fail)</TableHead>
           </TableRow>
           <TableRow>
-            <TableHead className="border bg-gray-300 text-black">(1)</TableHead>
-            <TableHead className="border bg-gray-300 text-black">(2)</TableHead>
-            <TableHead className="border bg-gray-300 text-black">(3)</TableHead>
-            <TableHead className="border bg-gray-300 text-black">(4)</TableHead>
-            <TableHead className="border bg-gray-300 text-black">(5)</TableHead>
-            <TableHead className="border bg-gray-300 text-black">(6)</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">(1)</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">(2)</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">(3)</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">(4)</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">(5)</TableHead>
+            <TableHead className="border-2 border-black bg-gray-300 text-black">(6)</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -394,16 +388,16 @@ export default function Component() {
               </TableRow>
               {part.tests.map((test, testIndex) => (
                 <TableRow key={testIndex}>
-                  <TableCell className="border">{test.no}</TableCell>
-                  <TableCell className="border">{test.name}</TableCell>
-                  <TableCell className="border">{test.rule}</TableCell>
-                  <TableCell className="border p-0">
+                  <TableCell className="border-2 border-black">{test.no}</TableCell>
+                  <TableCell className="border-2 border-black">{test.name}</TableCell>
+                  <TableCell className="border-2 border-black">{test.rule}</TableCell>
+                  <TableCell className="border-2 border-black p-0">
                     <Input className="border-none h-full" />
                   </TableCell>
-                  <TableCell className="border p-0">
+                  <TableCell className="border-2 border-black p-0">
                     <Input className="border-none h-full" />
                   </TableCell>
-                  <TableCell className="border p-0">
+                  <TableCell className="border-2 border-black p-0">
                     {'result' in test ? test.result : <Input className="border-none h-full" />}
                   </TableCell>
                 </TableRow>
@@ -429,11 +423,11 @@ export default function Component() {
         <CardContent className="space-y-6 p-0">
           <div className="pt-6">
             <h3 className="text-md font-semibold mb-3 text-center">(3). Overall Results</h3>
-            <Textarea className="min-h-[100px] w-full" placeholder="Enter summary here..." />
+            <Textarea className="min-h-[100px] w-full border-2 border-black" placeholder="Enter summary here..." />
           </div>
           <div className="pt-6">
             <h3 className="text-md font-semibold mb-3 text-center">(4). Summary (Issues identified):</h3>
-            <Textarea className="min-h-[100px] w-full" placeholder="Enter summary here..." />
+            <Textarea className="min-h-[100px] w-full border-2 border-black" placeholder="Enter summary here..." />
           </div>
           <div className="">
             <h3 className="text-md font-semibold mb-3 text-center">(5). Inspection Photos (to be uploaded):</h3>
@@ -442,7 +436,7 @@ export default function Component() {
                 {[0, 1].map((row) => (
                   <TableRow key={row}>
                     {[...Array(4)].map((_, col) => (
-                      <TableCell key={col} className="border p-4">
+                      <TableCell key={col} className="border-2 border-black p-4">
                       </TableCell>
                     ))}
                   </TableRow>
@@ -452,7 +446,7 @@ export default function Component() {
           </div>
           <div className="">
             <h3 className="text-md font-semibold mb-3 text-center">(6). Inspecting officer notes:</h3>
-            <Textarea className="min-h-[100px] w-full" placeholder="Enter notes here..." />
+            <Textarea className="min-h-[100px] w-full border-2 border-black" placeholder="Enter notes here..." />
           </div>
           <div className="">
             <h3 className="text-lg font-semibold mb-2 ml-2">Digital signature of ATS operator</h3>
