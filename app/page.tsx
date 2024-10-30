@@ -198,7 +198,7 @@ export default function Component() {
     <div className="w-full max-w-5xl mx-auto p-4">
 
       <div className="w-full mx-w-5xl mb-5">
-        <h1 className="text-center text-lg font-bold mb-2">"Form 69</h1>
+        <h1 className="text-center text-lg font-bold mb-2">Form 69</h1>
         <p className="text-center font-semibold mb-2">[See rule 181 (7)]</p>
         <h2 className="text-center text-lg font-bold mb-4">FORM FOR VEHICLE TEST REPORT</h2>
       
@@ -455,7 +455,7 @@ export default function Component() {
             <Textarea className="min-h-[100px] w-full" placeholder="Enter notes here..." />
           </div>
           <div className="">
-            <h3 className="text-lg font-semibold mb-2 ml-2">Digital signature of ATS operator".</h3>
+            <h3 className="text-lg font-semibold mb-2 ml-2">Digital signature of ATS operator</h3>
             {/* <Input type="text" placeholder="Enter digital signature" className="w-full" /> */}
           </div>
         </CardContent>
